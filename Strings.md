@@ -45,3 +45,19 @@ Java has some unique characteristics when dealing with Strings.  In this documen
       StringBuilder b = a.append("two");
 
     - After this code is ran, both a and b reference the same StringBuilder object that contains "onetwo"
+
+## Equality
+- In Java, string1 == string2 will compare references.
+
+      String z = "Hello World";
+      String x = " Hello World".trim();
+      System.out.println(z == x); // false
+
+    - Because x is not a literal String, it does not go in the String pool.
+    - Because == compares the references
+    - The comparison results in false
+
+- Use "str1".equals(str2); when comparing Strings.
+    - The String class has a .equals() method that compares the Value rather than the refernce.
+    - The StringBuilder does not have this same implementation.
+        - .equals() on StringBuilder only compares references (same as ==).
