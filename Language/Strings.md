@@ -24,7 +24,7 @@ Java has some unique characteristics when dealing with Strings.  In this documen
       }  
       System.out.println(alpha);
 
-    - The empty String is instantiated, then replaced by a new String object each time through the loop.
+    - The empty String is instantiated, then replaced by a new String object with the appended character each time through the loop.
 - To avoid this, StringBuilder is available.
 
 ## StringBuilder
