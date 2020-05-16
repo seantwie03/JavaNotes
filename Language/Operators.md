@@ -1,5 +1,5 @@
 # Java Operators
-Java has a few rules and peculiarities with its operators.  I have noted some of them below for future reference.
+Java's operators have a few rules and peculiarities.  I have noted some of them below for future reference.
 
 ## Binary Arithmatic Operators
 ### Numeric Promotion Rules
@@ -33,6 +33,14 @@ Java has a few rules and peculiarities with its operators.  I have noted some of
 
       Answer: int (Rule #3)
 
+- What is the numeric value of z?
+
+      long z;
+      z = Integer.MAX_VALUE + Integer.MAX_VALUE;
+
+      Answer: -2 (Rule #4)
+      Eventhought the result of the expression will be saved into a long, the result itself is an INT because both operands are INTs.
+
 
 ## Unary Operators
 - A unary operator is one that requires exactly one operand or variable to function.
@@ -45,7 +53,7 @@ Java has a few rules and peculiarities with its operators.  I have noted some of
       !  = Invert Boolean logical value
 
 ## Increment and Decrement Operators
-- Two increment and decrement operators are listed below:
+- Four increment and decrement operators are listed below:
 
       --x = pre-decrement operator
       ++x = pre-increment operator
@@ -66,7 +74,7 @@ Java has a few rules and peculiarities with its operators.  I have noted some of
           int x = 3;
           int y = x--;
 
-          After running the code above, x is 2, but y is 3.  The expression, in this case an assignment happens before the post-decrement operator.
+          After running the code above, x is 2, but y is 3.  The expression, in this case an assignment, happens before the post-decrement operator.
 
 - Below is another example of the difference between pre and post decrement/increment operators
 
@@ -80,7 +88,7 @@ Java has a few rules and peculiarities with its operators.  I have noted some of
 
       The first pre-increment operator updates the value before println is called.  The post-decrement operator updates the counter only after the original value is printed.
 
-- Below is a very obtuse example of multiple pre and post decrement/increment operators on the same line
+- Below is a very obtuse example of multiple pre and post decrement/increment operators on the same line.
 
       int x = 3;
       int y = ++x * 5 / x-- + --x;
